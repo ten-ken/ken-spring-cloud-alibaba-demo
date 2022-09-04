@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="ken.spring.cloud.alibaba.dao.UserDao">
+
+    <resultMap type="ken.spring.cloud.alibaba.po.User" id="baseMap">
+         <result column="user_no" property="userNo"/>
+         <result column="user_name" property="userName"/>
+         <result column="db_source" property="dbSource"/>
+         <result column="money" property="money"/>
+    </resultMap>
+
+    <insert id="addUser" parameterType="ken.spring.cloud.alibaba.po.User">
+        insert into user(user_name,db_source,money) value(#{userName},DATABASE(),#{money})
+    </insert>
+
+
+    <select id="getUserById" resultMap="baseMap">
+        select * from user where user_no =#{userNo}
+    </select>
+
+
+    <select id="findAll" resultMap="baseMap">
+        select * from user
+    </select>
+
+</mapper>

@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: sentinel-zuul
+  cloud:
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
+      #filter:
+      #  enabled: false
+      datasource.ds2.file:
+        file: "classpath: gateway.json"
+        ruleType: gw-flow
+      datasource.ds1.file:
+        file: "classpath: api.json"
+        ruleType: gw-api-group
+      zuul.enabled: true
+      eager: true
+server:
+  port: 8385
+
+management.endpoints.web.exposure.include: "*"
+
+zuul:
+  routes:
+    myUser:
+      path: /myUser1/**
+      serviceId: nacos-provider
+      #url: http://localhost:8081
+      #stripPrefix: false
+
+#nacos-provider:
+#  ribbon:
+#    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+#    listOfServers: http://localhost:8081,http://localhost:8082
+#    ConnectTimeout: 1000
+#    ReadTimeout: 3000
+#    MaxTotalHttpConnections: 500
+#    MaxConnectionsPerHost: 100
+

@@ -1,0 +1,19 @@
+server.port: 8082
+spring.application.name: nacos-provider
+spring.cloud.nacos.discovery.server-addr: 127.0.0.1:8848
+management.endpoints.web.exposure.include: '*'
+
+mybatis:
+  type-aliases-package: ken.spring.cloud.alibaba.po
+  mapper-locations: 'classpath:myMapper/*.xml'
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+spring:
+  datasource:
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://127.0.0.1:3306/sc_alibaba_02?characterEncoding=utf8&useUnicode=true
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456

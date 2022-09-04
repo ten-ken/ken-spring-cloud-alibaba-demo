@@ -1,0 +1,12 @@
+server:
+  port: 8282
+
+spring:
+  application:
+    name: nacos-consumer
+  cloud:
+    nacos:
+      discovery: false
+        #server-addr: 127.0.0.1:8848
+#spring.cloud.nacos.discovery
+

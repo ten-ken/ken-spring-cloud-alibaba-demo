@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: sentinel-feign
+  cloud:
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
+server:
+  port: 8384
+
+feign:
+  sentinel:
+    enabled: true

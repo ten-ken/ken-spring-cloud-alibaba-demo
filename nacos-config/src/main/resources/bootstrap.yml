@@ -1,0 +1,13 @@
+spring.cloud.nacos.config.file-extension: yaml
+
+spring:
+#  profiles:
+#    active: develop
+  cloud:
+     nacos:
+        config:
+          group: DEVELOP_GROUP
+          ext-config[0]:
+            data-id: ext-config-common01.properties
+            refresh: true
+          enabled: false

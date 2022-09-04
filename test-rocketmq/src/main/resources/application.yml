@@ -1,0 +1,52 @@
+
+# rocketmq的nameserver的配置
+spring.cloud.stream.rocketmq.binder.name-server: 127.0.0.1:9876
+
+
+#配置一个输出绑定
+spring.cloud.stream.bindings.output.destination: test-topic
+spring.cloud.stream.bindings.output.content-type: application/json
+spring.cloud.stream.rocketmq.bindings.output.producer.group: producer-group
+
+
+
+#配置一个输入绑定
+spring.cloud.stream.bindings.input.destination: test-topic
+spring.cloud.stream.bindings.input.content-type: application/json
+spring.cloud.stream.bindings.input.group: test-group
+
+#按tag进行消费-- 发送方
+spring.cloud.stream.bindings.tagOutput.destination: test-tags-topic
+spring.cloud.stream.bindings.tagOutput.content-type: application/json
+spring.cloud.stream.rocketmq.bindings.tagOutput.producer.group: producer-tags-group
+
+#按tag进行消费-- 接收方
+spring.cloud.stream.bindings.tagInput.destination: test-tags-topic
+spring.cloud.stream.bindings.tagInput.content-type: application/json
+spring.cloud.stream.bindings.tagInput.group: test-tags-group
+# 自定义的tags在RocketMQConsumerProperties并没有 只有subscription
+spring.cloud.stream.rocketmq.bindings.tagInput.consumer.subscription: myTag||myTag2
+
+
+#事务消息--=发送方
+spring.cloud.stream.bindings.transOutput.destination: test-transtional-topic
+spring.cloud.stream.bindings.transOutput.content-type: application/json
+spring.cloud.stream.rocketmq.bindings.transOutput.producer.group: producer-transtional-group
+spring.cloud.stream.rocketmq.bindings.transOutput.producer.transactional: true
+spring.cloud.stream.rocketmq.bindings.transOutput.producer.transactionListener: myTransListener
+spring.cloud.stream.rocketmq.bindings.transOutput.producer.producerType: Trans
+
+
+#事务消息--= 接收方
+spring.cloud.stream.bindings.transInput.destination: test-transtional-topic
+spring.cloud.stream.bindings.transInput.content-type: application/json
+spring.cloud.stream.bindings.transInput.group: test-transational-group
+
+
+spring:
+  application:
+    name: test-rocketmq
+
+server:
+  port: 8686
+

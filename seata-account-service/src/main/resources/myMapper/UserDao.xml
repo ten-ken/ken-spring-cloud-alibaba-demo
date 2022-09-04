@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="ken.spring.cloud.alibaba.dao.UserDao">
+
+    <resultMap type="ken.spring.cloud.alibaba.po.User" id="baseMap">
+        <result column="user_no" property="userNo"/>
+        <result column="user_name" property="userName"/>
+        <result column="db_source" property="dbSource"/>
+    </resultMap>
+
+    <update id="deduction" >
+        update user set money = money - #{money} where user_no = #{userNo}
+    </update>
+
+</mapper>

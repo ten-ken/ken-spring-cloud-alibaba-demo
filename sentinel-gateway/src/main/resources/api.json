@@ -1,0 +1,11 @@
+[
+  {
+    "apiName": "some_customized_api",
+    "predicateItems": [
+      {
+        "pattern": "/user/list"
+      }
+    ]
+  }
+
+]

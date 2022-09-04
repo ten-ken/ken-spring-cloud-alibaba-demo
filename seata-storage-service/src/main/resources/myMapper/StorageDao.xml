@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="ken.spring.cloud.alibaba.dao.StorageDao">
+
+    <resultMap type="ken.spring.cloud.alibaba.po.Storage" id="baseMap">
+        <result column="id" property="id"/>
+        <result column="commodity_code" property="commodityCode"/>
+        <result column="count" property="count"/>
+    </resultMap>
+
+    <insert id="storage" parameterType="ken.spring.cloud.alibaba.po.Storage" useGeneratedKeys="true" keyProperty="id">
+	   update storage_tbl set count = count - #{count} where commodity_code = #{commodityCode}
+	</insert>
+
+
+
+</mapper>

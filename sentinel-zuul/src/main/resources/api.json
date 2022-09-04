@@ -1,0 +1,14 @@
+[
+  {
+    "apiName": "my-api",
+    "predicateItems": [
+      {
+        "pattern": "/myUser1/user/get/**",
+        "matchStrategy": 1
+      },
+      {
+        "pattern": "/myUser1/user/list"
+      }
+    ]
+  }
+]

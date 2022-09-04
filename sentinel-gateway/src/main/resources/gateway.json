@@ -1,0 +1,14 @@
+[
+  {
+    "resource": "some_customized_api",
+    "count": 0
+  },
+  {
+    "resource": "httpbin_route",
+    "count": 0,
+    "paramItems": {
+      "parseStrategy": 3,
+      "fieldName": "username1"
+    }
+  }
+]
