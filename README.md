@@ -2,7 +2,7 @@
 
 致力构建一个的 Java 微服务体系的知识.
 
-视频地址: https://www.bilibili.com/video/BV1gN4y1j7bp
+视频地址: https://www.bilibili.com/video/BV1Qe411g7b5
 
 ## 关于
 
