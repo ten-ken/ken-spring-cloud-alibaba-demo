@@ -10,9 +10,9 @@
 
 📖 文章地址：
 
-​	1.暂无（待补充）
+​	1.[https://blog.csdn.net/jikuicui7402/article/details/126688014](https://blog.csdn.net/jikuicui7402/article/details/126688014)
 
-​	2.暂无（待补充）
+​	2.[https://juejin.cn/post/7139703269596594206](https://juejin.cn/post/7139703269596594206)
 
 🎁 **学习交流群**：
 ![编程交流群](ken-springcloud-alibaba-api/src/%E7%BC%96%E7%A8%8B%E4%BA%A4%E6%B5%81%E7%BE%A4-01.jpg)
